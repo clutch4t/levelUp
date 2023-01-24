@@ -1,0 +1,226 @@
+@media only screen and (min-width: 491px) and (max-width: 600px) {
+
+    /* HEADER STARTS */
+
+    header {
+        display: flex;
+        min-width: 100%;
+        height: 80px;
+        background-color: rgb(155, 89, 159);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        justify-content: space-between;
+    }
+
+    /* HEADER NAVMENU STARTS */
+
+    .header__navmenu {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .header__navmenu__left {
+        display: flex;
+        flex-wrap: wrap;
+        width: 450px;
+        z-index: 2;
+    }
+
+    .header__navmenu__left-logo {
+        width: 200px;
+        height: 80px;
+        cursor: pointer;
+    }
+
+    .header__navmenu__left-logo>a>img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* BURGER MENU STARTS */
+
+    .menu-btn {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .menu-btn span {
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #222222;
+        transition: all .5s;
+        background-color: white;
+    }
+
+    .menu-btn span:nth-of-type(2) {
+        top: calc(50% - 5px);
+    }
+
+
+    .menu-btn span:nth-of-type(3) {
+        top: calc(50% + 5px);
+    }
+
+    .menu-btn.active span:first-of-type {
+        transform: translateX(100%);
+    }
+
+    .menu-btn.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .menu-btn.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .header__navmenu__right {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        transform: translateX(-100%);
+        transition: transform .5s;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 25px;
+        background-color: rgb(155, 89, 159);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        z-index: 1;
+    }
+
+    .header__navmenu__right>ul>li:first-child {
+        margin-top: 75px;
+    }
+
+    .header__navmenu__right>ul>li {
+        display: block;
+        cursor: pointer;
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+    .header__navmenu__right>ul>li>a {
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .header__navmenu__right.active {
+        transform: translateY(0);
+    }
+
+    /* BURGER MENU ENDS */
+
+    /* HEADER ENDS */
+
+    /* MAIN CONTENT STARTS */
+
+    section {
+        z-index: -2;
+    }
+
+    .promoContainer {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 450px;
+    }
+
+    .productTitle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        font-size: 48px;
+        font-weight: bolder;
+        margin-top: 20px;
+        background: gray;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .productPromos {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 600px;
+        margin-top: 30px;
+        border-radius: 8px;
+    }
+
+    .productPromo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 30px;
+        border-radius: 10px;
+        border: 1px solid white;
+        margin-bottom: 30px;
+    }
+
+    .productImage {
+        width: 35%;
+        height: 250px;
+    }
+
+    .productImage>img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .productName {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 20px 0;
+        color: white;
+        justify-content: center;
+    }
+
+    .productPromo>ol>li {
+        list-style-type: decimal;
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    #productOrderBtn {
+        width: 100%;
+        height: 30px;
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        transition: all .35s ease;
+        cursor: pointer;
+    }
+
+    #productOrderBtn:hover {
+        background-color: rgb(155, 89, 159);
+        color: gold;
+    }
+
+    /* MAIN CONTENT ENDS */
+}
